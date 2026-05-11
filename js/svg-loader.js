@@ -1,6 +1,6 @@
 (function () {
     function loadSvgSprite() {
-        fetch('assets/icons/sprite.svg')
+        fetch('./assets/icons/sprite.svg')
             .then(response => {
                 if (!response.ok) throw new Error('SVG sprite not found');
                 return response.text();
