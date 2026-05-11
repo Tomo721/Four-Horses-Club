@@ -1,0 +1,20 @@
+.footer-content {
+    padding: 39px 52px 72px;
+    background-color: var(--beige);
+}
+
+.footer-content p {
+    font-size: 16px;
+    opacity: 0.6;
+    line-height: 1.3;
+}
+
+@media(max-width: 375px) {
+    .footer-content {
+        padding: 40px 0px 60px;
+    }
+
+    .footer-content p {
+        line-height: 118%;
+    }
+}

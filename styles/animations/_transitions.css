@@ -1,0 +1,64 @@
+.carousel__slide {
+    transition: opacity 0.3s ease;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stages__airplane {
+    opacity: 0;
+    transform: translateZ(-300px) scale(0.5);
+    transition: all 0.8s ease-out;
+}
+
+.stages__airplane.visible {
+    opacity: 1;
+    transform: translateZ(0) scale(1);
+}
+
+
+.section-club.visible .club__explosion {
+    opacity: 0;
+    animation: playerBlastOnce 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.section-club.visible .club__money {
+    animation: dropDown 1s ease-in-out;
+}
+
+.section-club.visible .club__hand {
+    animation: pushPawn 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.section-club.visible .club__horse-explosion {
+    opacity: 0;
+    animation: playerBlastOnce 0.2s ease-out forwards;
+    animation-delay: 1.7s;
+}
+
+.section-club.visible .club__horse {
+    animation: moneyShake 0.36s ease-in-out;
+    animation-delay: 1.5s;
+}
+
+@media (max-width: 768px) {
+    .stages__airplane.visible {
+        transform: translateX(-50%);
+    }
+}
+
+@media(max-width: 375px) {
+    .stages__airplane.visible {
+        transform: rotateZ(-4deg);
+    }
+}

@@ -1,0 +1,102 @@
+.help-wrap {
+    padding-top: 107px;
+}
+
+.help-wrap__text-first,
+.help-wrap__text-second {
+    display: inline;
+}
+
+.help-wrap__text-first::after {
+    content: " ";
+}
+
+.help-wrap h3 {
+    width: 100%;
+    max-width: 764px;
+}
+
+.help-wrap h3 span {
+    color: var(--highlight-color);
+    font-weight: 700;
+}
+
+.help-wrap__img {
+    margin-top: -27px;
+    float: right;
+    width: 394px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: url('../../assets/images/group_chess.png');
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.help-wrap__img::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/card_back.png');
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 5;
+    mix-blend-mode: color-burn;
+    opacity: 0.8;
+}
+
+@media(max-width: 1000px) {
+    .help-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .help-wrap h3 {
+        margin-bottom: 0;
+    }
+
+    .help-wrap__text-first {
+        order: 1;
+    }
+
+    .help-wrap__text-second {
+        order: 3;
+    }
+
+    .help-wrap__img {
+        order: 2;
+        float: none;
+        margin: 24px 0 26px;
+        background-size: contain;
+    }
+}
+
+@media(max-width: 767px) {
+    .help-wrap {
+        flex-direction: column;
+        padding-top: 49px;
+    }
+
+    .help-wrap h3 {
+        letter-spacing: 0.5px;
+    }
+
+    .help-wrap__img {
+        width: 100%;
+        max-width: 335px;
+        height: 212px;
+    }
+}
+
+@media(max-width: 375px) {
+    .help-wrap {
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+}

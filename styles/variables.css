@@ -1,0 +1,24 @@
+:root {
+    --black: #1F1F1F;
+    --gray: #313131;
+    --yellow: #FBCE51;
+    --white: #FFFFFF;
+
+    --color-primary: #3057A2;
+    --color-disabled: #D6D6D6;
+
+    --color-bg: var(--white);
+    --color-border: #D0D0D0;
+
+    --color-dots: #D9D9D9;
+    
+    --banner-bg: #e8d8c9;
+
+    --highlight-color: #F54932;
+    --beige: #E9DED4;
+
+    --font-family-base: 'Golos Text', sans-serif;
+    --font-family-add: 'Merriweather', sans-serif;
+    --font-size-base: 20px;
+    --line-height-base: 120%;
+}

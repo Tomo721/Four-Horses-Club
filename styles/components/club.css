@@ -1,0 +1,363 @@
+.club-wrap {
+    margin-top: 46px;
+    display: flex;
+    width: 100%;
+}
+
+.club-wrap__imgs {
+    height: 609px;
+    width: 518px;
+    background-color: var(--white);
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    color: var(--white);
+}
+
+.club-wrap__imgs::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/card_back.png');
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 5;
+    mix-blend-mode: color-burn;
+
+}
+
+.club-wrap__imgs::after {
+    content: '';
+    width: 406px;
+    height: 437px;
+    background-image: url('../../assets/images/paper.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 87px;
+    left: 22px;
+    z-index: 1;
+}
+
+.club__explosion {
+    width: 528px;
+    height: 100%;
+    background-image: url('../../assets/images/explosion.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 3;
+    position: absolute;
+    top: 19px;
+    left: -26px;
+}
+
+.club__money {
+    position: absolute;
+    top: 69.92px;
+    right: 44px;
+    z-index: 2;
+}
+
+.club__chess-man {
+    position: absolute;
+    z-index: 4;
+    top: 135.12px;
+    left: 75.37px;
+}
+
+.club__hand {
+    position: absolute;
+    z-index: 4;
+    right: 94px;
+    top: 406.18px;
+    transform: rotateZ(39.89deg);
+}
+
+.club__horse-explosion {
+    position: absolute;
+    z-index: 4;
+    left: -13.6px;
+    bottom: 50px;
+}
+
+.club__horse {
+    position: absolute;
+    z-index: 4;
+    left: 64.4px;
+    bottom: 35px;
+}
+
+.club-wrap__info {
+    padding-top: 47px;
+}
+
+.club-wrap__info p {
+    color: var(--color-primary);
+}
+
+.club__title {
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 704px;
+}
+
+.club__title span {
+    color: var(--highlight-color);
+    font-weight: 700;
+}
+
+.table-club {
+    margin-bottom: 48px;
+}
+
+.table-club__row {
+    display: flex;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.table-club__row:first-child .table-club__column {
+    padding-top: 0;
+}
+
+.table-club__row:last-child {
+    border-bottom: 0;
+}
+
+.table-club__row:last-child .table-club__column {
+    padding-bottom: 0;
+}
+
+.table-club__column {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.table-club__column span.table-club__old-price {
+    position: relative;
+    margin-right: 12px;
+}
+
+.table-club__column span.table-club__row--line:before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 50%;
+    background-color: var(--highlight-color);
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.table-club__column:first-child {
+    max-width: 306px;
+    padding-right: 16px;
+    border-right: 2px solid var(--color-border);
+    opacity: 0.7;
+}
+
+.table-club__column:last-child {
+    padding-left: 16px;
+    font-weight: 600;
+}
+
+@media(max-width: 1000px) {
+    .club-wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width: 768px) {
+    .club__title {
+        max-width: 600px;
+    }
+}
+
+@media(max-width: 767px) {
+    .club-wrap__imgs {
+        width: 100%;
+        max-width: 335px;
+        height: 374px;
+    }
+
+    .club__chess-man {
+        max-width: 239px;
+        top: 46px;
+        left: 55px;
+    }
+
+    .club__hand {
+        max-width: 123px;
+        top: auto;
+        right: 22px;
+        bottom: 0;
+    }
+
+    .club__explosion {
+        max-width: 373px;
+        top: -50px;
+        left: -20px;
+    }
+
+    .club__horse {
+        max-width: 110px;
+        left: 42px;
+    }
+
+    .club__horse-explosion {
+        max-width: 173px;
+    }
+
+    .club__money {
+        max-width: 85px;
+        right: -20px;
+        top: 0;
+    }
+
+    .club-wrap {
+        margin-top: 80px;
+    }
+
+    .club-wrap__imgs::after {
+        max-width: 289px;
+        height: 309px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media(max-width: 510px) {
+    .table-club__row {
+        flex-direction: column;
+    }
+
+    .table-club__column:first-child {
+        border: 0;
+    }
+
+    .table-club__column:last-child {
+        padding-left: 0;
+        padding-top: 0;
+    }
+}
+
+@media(max-width: 375px) {
+    .club-wrap__imgs::after {
+        left: 17px;
+        transform: none;
+    }
+
+    .club__explosion {
+        top: -46px;
+    }
+
+    .club__money {
+        right: 0px;
+        top: -9px;
+    }
+
+    .club__chess-man {
+        top: 36px;
+        left: 54px;
+    }
+
+    .club__horse {
+        left: 46px;
+        bottom: 27px;
+    }
+
+    .club__hand {
+        right: 35px;
+        bottom: -20px;
+    }
+
+    .club__horse-explosion {
+        left: -8.6px;
+        bottom: 38px;
+    }
+
+    .club-wrap__info {
+        padding-top: 7px;
+    }
+
+    .table-club__column {
+        padding: 14px 0;
+    }
+
+    .club__title {
+        margin-bottom: 43px;
+    }
+
+    .table-club {
+        margin-bottom: 39px;
+    }
+
+    .table-club__row.table-club__row--line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .table-club__row.table-club__row--line .table-club__column:last-child {
+        padding: 14px 0;
+        margin-left: -36px;
+    }
+
+    .table-club__row:last-child .table-club__column:last-child {
+        padding-top: 14px;
+    }
+
+    .club-wrap__info p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 374px) {
+    .club-wrap__imgs {
+        max-width: 310px;
+        height: 304px;
+    }
+
+    .club__explosion {
+        max-width: 310px;
+        left: 0;
+    }
+
+    .club__chess-man {
+        top: 26px;
+        left: 45px;
+        max-width: 200px;
+    }
+
+    .club-wrap__imgs::after {
+        left: 6px;
+        height: 288px;
+    }
+
+    .club__money {
+        max-width: 70px;
+    }
+
+    .club__hand {
+        max-width: 100px;
+        right: 30px;
+        bottom: -14px;
+    }
+
+    .club__horse {
+        max-width: 80px;
+        left: 70px;
+        bottom: 28px;
+    }
+
+    .club__horse-explosion {
+        max-width: 134px;
+        left: 19px;
+        bottom: 36px;
+    }
+}
