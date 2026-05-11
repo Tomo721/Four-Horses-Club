@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     z-index: 3;
-    background-image: url('../../assets/images/banner_back.png');
+    background-image: url('/assets/images/banner_back.png');
     background-position: center;
     background-size: cover;
     mix-blend-mode: color-burn;
@@ -39,7 +39,7 @@
     height: 100%;
     bottom: 0;
     right: 0;
-    background-image: url('../../assets/images/city.png');
+    background-image: url('/assets/images/city.png');
     background-position: center;
     background-size: contain;
     position: absolute;
